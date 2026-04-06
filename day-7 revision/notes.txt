@@ -1,0 +1,41 @@
+Pandas
+
+1. Series
+- A one dimensional data
+- mostly contains same type of details
+- an array like structure
+
+2. DataFrame
+- A two dimensional data
+- contains rows and columns
+- can have multiple data structures of each column
+
+# Sample data
+df = pd.DataFrame({
+    "name": ["A", "B"],
+    "age": [25, 30]
+})
+
+# Select rows and columns
+df.loc[0:2, ["name"]]
+
+# Filtering data
+df[df["salary"] > 50000]
+
+# Alternative way using query
+df.query("salary > 50000 and age > 30")
+
+# Sample Data
+df.head()
+df.tail()
+
+# information gathering
+df.info()
+df.describe()
+
+# check missing values
+df.isnull().sum()
+
+
+3. Mostly we follow below approach to perform data analysis:
+Create Data → Inspect → Select → Filter → Analyze
