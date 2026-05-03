@@ -52,3 +52,23 @@ df = pd.DataFrame(data)
 # 10. Filter orders placed after Jan 10.
 # df["Date"] = pd.to_datetime(df["Date"])
 # print(df[df["Date"] > '2023-01-10'])
+
+
+# 11. Find highest order per customer.
+# print(df.loc[df.groupby("Customer")["Amount"].idxmax()])
+
+
+# 12. Count how many orders have Amount < 300.
+# print(df[df["Amount"] < 300].shape[0])
+
+
+# 13. Add column "Discounted" (Amount - 10%).
+# df["Discount"] = df["Amount"] * 0.90
+
+
+# 14. Check datatype of all columns.
+# print(df.dtypes)
+
+
+# 15. Drop duplicate customers keeping first occurrence.
+# print(df.drop_duplicates(subset="Customer"))
